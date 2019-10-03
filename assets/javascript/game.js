@@ -2,7 +2,7 @@
 
 var wins = 0;
 var losses = 0;
-var guessesLeft = 5;
+var guessesLeft = 10;
 var guessedSoFar = "";
 var randomLetter = "";
 var userGuess = "";
@@ -43,7 +43,7 @@ function game() {
       updateStats();
       //wrong: no guess, left reset game update stat
       if (guessesLeft === 0) {
-        guessesLeft = 5;
+        guessesLeft = 10;
         guessedSoFar = "";
         randomLetter = "";
         losses++;
@@ -53,7 +53,7 @@ function game() {
       //correct: plus wins
     } else {
       wins++;
-      guessesLeft = 5;
+      guessesLeft = 10;
       guessedSoFar = "";
       randomLetter = "";
       updateStats();
